@@ -108,7 +108,7 @@ end;`,
                         padding: "5px",
                         fontSize: "14px"
                     }} >
-                        made by Soapp
+                        made by Soap
                     </div>
                 </div>
             {/* <button onClick={this.onRun}>run</button> */}

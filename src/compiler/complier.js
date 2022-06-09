@@ -54,10 +54,12 @@ const tokenizier = (code) =>{
             const skipChar = ['\r', ' ', '\t', ';', '#']
 
             if (skipChar.includes(char)){
-                if (char == '#'){
+                if (char === '#'){
                     hasComment = true
                 }
-                if (token.value.length == 0){
+                
+
+                if (token.value.length === 0 && char !== ';'){
                     token = {
                         name: '',
                         value: '',
@@ -69,23 +71,25 @@ const tokenizier = (code) =>{
                     continue;
                 }
 
-                token.type = getTokenType(token.value)
+                if (token.value.length !== 0){
+                    token.type = getTokenType(token.value)
                 
-                if (token.type === 'keyword') token.name = token.value
-                else token.name = token.type
+                    if (token.type === 'keyword') token.name = token.value
+                    else token.name = token.type
 
-                if (token.length !== 0) tokens.push(token)
+                    if (token.length !== 0) tokens.push(token)
 
-                token = {
-                    name: '',
-                    value: '',
-                    line: i,
-                    start: -1,
-                    end: 0,
-                    type: ""
+                    token = {
+                        name: '',
+                        value: '',
+                        line: i,
+                        start: -1,
+                        end: 0,
+                        type: ""
+                    }
                 }
-                
-                if (char == ';'){
+
+                if (char === ';'){
                     tokens.push({
                         name: 'semicolon',
                         value: ';',
@@ -95,7 +99,6 @@ const tokenizier = (code) =>{
                         type: "semicolon"
                     })
                 }
-
             }else{
                 if (token.start == -1) token.start = j 
                 token.end = j
@@ -127,7 +130,6 @@ const tokenizier = (code) =>{
     <normalStatement> -> <init> <identifier> <equal> <number> <semicolon>
 */
 
-// identifier keyword number separator
 
 const grammars = [
     {
@@ -203,13 +205,48 @@ const grammars = [
 ]
 
 const checkGrammar = (statement, grammar) =>{
-    if (statement.length != grammar.rule.length) return false
-
-    for (let i = 0; i < statement.length; i++){
-        if (grammar.rule[i] !== statement[i].name) return false
+    if (statement.length != grammar.rule.length) return {
+        matched: false,
+        error: ''
     }
 
-    return true
+    let matched = true
+
+    let missingToken = ''
+
+    for (let i = 0; i < statement.length; i++){
+        if (grammar.rule[i] !== statement[i].name) {
+            missingToken = {
+                name: grammar.rule[i],
+                line: statement[i].line,
+                start: statement[i].start,
+                end: statement[i].end
+            }
+            matched = false
+            break
+        }
+    }
+    let error = ''
+    if (reservedWords.includes(statement[0].name) && grammar.rule[0] === statement[0].name && matched === false){
+        switch(missingToken.name){
+            case 'identifier':
+                error = `Invalid identifier, Detected in: line ${parseInt(missingToken.line) + 1}, start ${parseInt(missingToken.start)} , end ${parseInt(missingToken.end)}.`
+                break;
+            case 'semicolon':
+                error = `Missing ; line ${parseInt(missingToken.line) + 1}, colunm ${parseInt(missingToken.start)}.`
+                break;
+            case 'number':
+                error = `Invalid number, Detected in: line ${parseInt(missingToken.line) + 1}, start ${parseInt(missingToken.start)} , end ${parseInt(missingToken.end)}.`
+                break;
+            default:
+                error = `Invalid syntax, Detected in: line ${parseInt(missingToken.line) + 1}, start ${parseInt(missingToken.start)} , end ${parseInt(missingToken.end)}.`   
+        }
+    }
+
+    return {
+        matched,
+        error
+    }
 }
 
 /*
@@ -287,15 +324,22 @@ const shiftReduceParser = (tokens) =>{
     let currentToken = remains[0]
     remains = tokens.slice(1)
 
+    let error = ''
+
     while (true){
         console.log(stack)
+
+        if(error !== '') break
         
         let hasReduce = false
         for (let k = 0; k < stack.length; k++){
+            if(error !== '') break
             let tmp = stack.slice(k)
 
             for (let m = 0; m < grammars.length; m++){
-                if (checkGrammar(tmp, grammars[m])){
+                let check = checkGrammar(tmp, grammars[m])
+
+                if (check.matched){
                     stack = stack.slice(0,k)
                     let node 
 
@@ -328,6 +372,11 @@ const shiftReduceParser = (tokens) =>{
                     stack.push(node)
 
                     hasReduce = true
+                }else{
+                    if (check.error.length !== 0) {
+                        error = check.error
+                        break
+                    }
                 }
             }
         }
@@ -348,9 +397,15 @@ const shiftReduceParser = (tokens) =>{
             astTree: stack[0].branchesList
         }
     }else{
+        if (error === ''){
+            return {
+                success: false,
+                message: 'Missing end statement.'
+            }
+        }
         return {
             success: false,
-            message: 'Fail to complie token'
+            message: error
         }
     }
 }
@@ -465,6 +520,12 @@ export const Compiler = (code) =>{
             tokens: tokens
         }
     }else{
-
+        return {
+            success: false,
+            log: res.message,
+            astTree: {},
+            jsCode: '',
+            tokens: []
+        }
     }
 }
