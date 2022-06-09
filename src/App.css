@@ -1,0 +1,113 @@
+.App {
+  height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+#container {
+  display: flex;
+  height: -moz-calc(100% - 66px);
+  height: -webkit-calc(100% - 66px);
+  height: calc(100% - 66px);
+}
+
+#leftPannel {
+  flex: 50%;
+  border-right: 1px solid #838181;
+}
+
+#rightPannel {
+  flex: 50%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+#Editor {
+  height: 100vh;
+}
+
+#Appbar {
+  /* height: 45px; */
+  border-bottom: 1px solid #838181;
+  border-top: 1px solid #838181;
+  display: flex;
+  background-color: #dfdfdf;
+}
+
+#leftAppbar {
+  flex: 50%;
+  border-right: 1px solid #838181;
+  display: flex;
+  justify-content: space-between;
+}
+
+#rightAppbar {
+  flex: 50%;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+#runbtn {
+  border-left: 1px solid #838181;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#title {
+  border-right: 1px solid #838181;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.tab {
+  border-right: 1px solid #838181;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#terminal {
+  font-family: monospace;
+  padding: 10px;
+  color: white;
+  white-space: pre-wrap
+}
+
+#codeShower {
+  font-family: monospace;
+  padding: 10px;
+  white-space: pre-wrap
+}
