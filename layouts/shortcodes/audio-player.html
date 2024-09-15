@@ -17,19 +17,24 @@
   const pauseText = button.querySelector('.pause-text');
 
   button.addEventListener('click', function() {
-    if (audio.paused || audio.ended) {
-      // Only reset currentTime if the audio is ended
-      if (audio.ended) {
+    // if (audio.ended) {
         audio.currentTime = 0;
-      }
-      audio.play();
-      playText.style.display = 'none';
-      pauseText.style.display = 'inline';
-    } else {
-      audio.pause();
-      playText.style.display = 'inline';
-      pauseText.style.display = 'none';
-    }
+    // }
+    audio.play();
+    // if (audio.paused || audio.ended) {
+    //   // Only reset currentTime if the audio is ended
+    //   if (audio.ended) {
+    //     audio.currentTime = 0;
+    //   }
+    //   audio.play();
+    //   playText.style.display = 'none';
+    //   pauseText.style.display = 'inline';
+    // } else {
+    //   audio.pause();
+    //   audio.currentTime = 0;
+    //   playText.style.display = 'inline';
+    //   pauseText.style.display = 'none';
+    // }
   });
 
   // Reset button text when audio ends
