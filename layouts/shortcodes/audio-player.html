@@ -1,0 +1,60 @@
+{{ $src := .Get "src" }}
+{{ $id := delimit (shuffle (seq 999)) "" }}
+<button id="audioButton{{ $id }}" class="audio-button">
+  <span class="play-text">Play</span>
+  <span class="pause-text" style="display:none;">Pause</span>
+</button>
+<audio id="audio{{ $id }}">
+  <source src="{{ $src | relURL }}" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+(function() {
+  const button = document.getElementById('audioButton{{ $id }}');
+  const audio = document.getElementById('audio{{ $id }}');
+  const playText = button.querySelector('.play-text');
+  const pauseText = button.querySelector('.pause-text');
+
+  button.addEventListener('click', function() {
+    if (audio.paused) {
+      audio.play();
+      playText.style.display = 'none';
+      pauseText.style.display = 'inline';
+    } else {
+      audio.pause();
+      playText.style.display = 'inline';
+      pauseText.style.display = 'none';
+    }
+  });
+})();
+</script>
+
+<style>
+.audio-button {
+  width: 60px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #cfcfcf;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  padding: 0;
+}
+
+.audio-button:hover {
+  background-color: #707070;
+  color: rgb(239, 239, 239);
+}
+
+.play-text, .pause-text {
+  line-height: 1;
+  width: 100%;
+  text-align: center;
+}
+</style>
