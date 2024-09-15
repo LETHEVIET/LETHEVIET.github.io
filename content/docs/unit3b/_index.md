@@ -50,7 +50,7 @@ title: "Unit 3B Food and Drink"
 |:------------------------------------------------------------------------------|:--------------------|:-----------------------|:----------------------|
 | {{<audio-player src="audio/unit3b/vocabularies/18_thailand.mp3">}}            | Thailand            | /ˈtaɪlænd/             | Thái Lan              |
 | {{<audio-player src="audio/unit3b/vocabularies/19_moon_cake.mp3">}}           | Moon cake           | /muːn keɪk/            | Bánh trung thu        |
-| {{<audio-player src="audio/unit3b/vocabularies/20_mid_autumn_festival.mp3">}} | mid autumn festival | /mɪd ˈɔːtəm ˈfɛstɪvəl/ | Lễ hội trung thu      |
+| {{<audio-player src="audio/unit3b/vocabularies/20_mid_autumn_festival.mp3">}} | Mid-Autumn festival | /mɪd ˈɔːtəm ˈfɛstɪvəl/ | Lễ hội trung thu      |
 | {{<audio-player src="audio/unit3b/vocabularies/21_roast_lamb.mp3">}}          | Roast lamb          | /rəʊst læm/            | Cừu nướng             |
 | {{<audio-player src="audio/unit3b/vocabularies/22_easter.mp3">}}              | Easter              | /ˈiːstər/              | Lễ Easter             |
 | {{<audio-player src="audio/unit3b/vocabularies/23_roast_turkey.mp3">}}        | Roast turkey        | /rəʊst ˈtɜːki/         | Gà tây nướng          |
@@ -101,7 +101,7 @@ title: "Unit 3B Food and Drink"
 | {{<audio-player src="audio/unit3b/sentences/01_She_usually_eats_breakfast_at_7_am.wav">}}             | She usually eats breakfast at 7 a.m            | Cô ấy thường ăn sáng lúc 7 giờ sáng                    |
 | {{<audio-player src="audio/unit3b/sentences/02_We_often_go_to_the_park_on_weekends.wav">}}            | We often go to the park on weekends            | Chúng tôi thường đến công viên vào cuối tuần           |
 | {{<audio-player src="audio/unit3b/sentences/03_They_sometimes_play_soccer_after_class.wav">}}         | They sometimes play soccer after class         | Thỉnh thoảng họ chơi bóng đá sau giờ học               |
-| {{<audio-player src="audio/unit3b/sentences/04_I_rarely_watch_T_V_during_the_week.wav">}}             | I rarely watch T V during the week             | Tôi hiếm khi xem TV trong tuần                         |
+| {{<audio-player src="audio/unit3b/sentences/04_I_rarely_watch_T_V_during_the_week.wav">}}             | I rarely watch TV during the week             | Tôi hiếm khi xem TV trong tuần                         |
 | {{<audio-player src="audio/unit3b/sentences/05_She_never_eats_sushi.wav">}}                           | She never eats sushi.                          | Cô ấy không bao giờ ăn sushi.                          |
 | {{<audio-player src="audio/unit3b/sentences/06_I_always_eat_my_food_hot.wav">}}                       | I always eat my food hot                       | Tôi luôn ăn đồ ăn nóng                                 |
 | {{<audio-player src="audio/unit3b/sentences/07_The_roast_turkey_is_cold.wav">}}                       | The roast turkey is cold                       | Gà tây nướng nguội rồi                                 |
@@ -115,7 +115,7 @@ title: "Unit 3B Food and Drink"
 | {{<audio-player src="audio/unit3b/sentences/15_Do_they_often_drink_juice_after_dinner.wav">}}         | Do they often drink juice after dinner?        | Họ có thường uống nước ép sau bữa tối không?           |
 | {{<audio-player src="audio/unit3b/sentences/16_Do_you_rarely_buy_fruit.wav">}}                        | Do you rarely buy fruit?                       | Bạn hiếm khi mua trái cây phải không?                  |
 | {{<audio-player src="audio/unit3b/sentences/17_Do_you_sometimes_study_in_the_library.wav">}}          | Do you sometimes study in the library?         | Bạn có thỉnh thoảng học ở thư viện không?              |
-| {{<audio-player src="audio/unit3b/sentences/18_Do_they_never_watch_T_V_in_the_evening.wav">}}         | Do they never watch T V in the evening?        | Họ có bao giờ xem TV vào buổi tối không?               |
+| {{<audio-player src="audio/unit3b/sentences/18_Do_they_never_watch_T_V_in_the_evening.wav">}}         | Do they never watch TV in the evening?        | Họ có bao giờ xem TV vào buổi tối không?               |
 | {{<audio-player src="audio/unit3b/sentences/19_Do_you_often_drink_coke_at_home.wav">}}                | Do you often drink coke at home?               | Bạn có thường uống coca ở nhà không?                   |
 | {{<audio-player src="audio/unit3b/sentences/20_Do_you_sell_steamed_bun_here.wav">}}                   | Do you sell steamed bun here?                  | Bạn có bán bánh bao ở đây không?                       |
 | {{<audio-player src="audio/unit3b/sentences/21_Do_you_like_to_eat_ice_cream_cold.wav">}}              | Do you like to eat ice cream cold?             | Bạn có thích ăn kem lạnh không?                        |
