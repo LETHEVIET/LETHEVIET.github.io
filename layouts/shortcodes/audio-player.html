@@ -18,14 +18,22 @@
 
   button.addEventListener('click', function() {
     if (audio.paused) {
+      audio.currentTime = 0; // Reset audio to beginning
       audio.play();
       playText.style.display = 'none';
       pauseText.style.display = 'inline';
     } else {
       audio.pause();
+      audio.currentTime = 0; // Reset audio to beginning when paused
       playText.style.display = 'inline';
       pauseText.style.display = 'none';
     }
+  });
+
+  // Reset button text when audio ends
+  audio.addEventListener('ended', function() {
+    playText.style.display = 'inline';
+    pauseText.style.display = 'none';
   });
 })();
 </script>
