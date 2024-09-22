@@ -1,12 +1,11 @@
 ---
 weight: 1
 bookFlatSection: true
-title: "Unit 3B Food and Drink"
+title: "EFTB - Unit 3B: I always have dinner early"
 ---
 
-# Unit 3B Food and Drink
+# Unit 3B: I always have dinner early
 
-## 3A. I always have dinner early
 ### 1. Vocabulary (35 Words)
 | Audio                                                                         | Word                | IPA                    | Meaning               |
 |:------------------------------------------------------------------------------|:--------------------|:-----------------------|:----------------------|
