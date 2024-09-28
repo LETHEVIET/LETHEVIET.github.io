@@ -29,10 +29,16 @@ title: "EFTB - Unit 4A: What do you study?"
 ### Listening
 Audio:
 
+Tốc độ bình thường:
+
+{{<audio-with-controls src="audio/unit4a/listening/Toai_075_reading.mp3">}}
+
+Tốc độ chậm:
+
 {{<audio-with-controls src="audio/unit4a/listening/Toai_slow_reading.mp3">}}
 
 Transcript:
-> My name is Toai, and I live in Ho Chi Minh City. I work in the showbiz industry, so I travel a lot. My schedule is usually like this: on Friday, I worked in Ho Chi Minh City in the morning. In the evening, I flew to Thailand to work for two days. On Monday, I flew back to Ho Chi Minh City just in time to prepare English lesson activities with other teachers. So we can always teach the students on Tuesday. It’s a wonderful experience.
+> My name is Toai, and I live in Ho Chi Minh City. I work in the showbiz industry, so I travel a lot. My schedule is usually like this: on Friday, I work in Ho Chi Minh City in the morning. In the evening, I fly to Thailand to work for two days. On Monday, I fly back to Ho Chi Minh City just in time to prepare English lesson activities with other teachers. So we can always teach the students on Tuesday. It’s a wonderful experience.
 
 ### Grammar Structures
 
